@@ -7,12 +7,13 @@
 ## What Works
 - Memory Bank structure established.
 - Dataset files located.
+- `analysis.ipynb` created for initial exploration.
 
 ## What's Left to Build
-- [ ] Define project dependencies in `requirements.txt`
-- [ ] Create data loading scripts
+- [x] Define project dependencies in `requirements.txt`
+- [ ] Create data loading scripts (Partially covered by notebook)
 - [ ] Implement core analysis/modeling logic
 - [ ] Verify data integrity
 
 ## Known Issues
-- `requirements.txt` is empty.
+- None currently.

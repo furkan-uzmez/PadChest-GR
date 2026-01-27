@@ -6,11 +6,14 @@
 
 ## Recent Changes
 - Created Memory Bank structure (`memory-bank/` directory and core files).
+- Created `analysis.ipynb` for dataset exploration.
+- Updated `requirements.txt` with data science libraries.
 
 ## Next Steps
-- Populate `requirements.txt` based on project needs.
-- Explore the contents of `dataset/` specifically the JSON structure.
-- Define a clear goal for the data usage.
+- Run the notebook to verify data loading.
+- Analyze the structure of the JSON data in more detail.
+- Define specific analysis goals based on user feedback.
 
 ## Active Decisions
 - Using `memory-bank/` directory for documentation to keep root clean.
+- Added standard data science stack (`pandas`, `matplotlib`) to requirements.
