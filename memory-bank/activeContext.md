@@ -1,19 +1,23 @@
 # Active Context
 
 ## Current Work Focus
-- **Initialization**: Setting up the Memory Bank and understanding the project structure.
-- **Data Exploration**: Understanding the contents of `dataset/` to plan next steps.
+- **Dataset Analysis**: deeply analyzing the PadChest-GR dataset attributes and data quality.
+- **Documentation**: Updating the project documentation to reflect findings.
 
 ## Recent Changes
-- Created Memory Bank structure (`memory-bank/` directory and core files).
-- Created `analysis.ipynb` for dataset exploration.
-- Updated `requirements.txt` with data science libraries.
+- **Detailed EDA**: Performed extensive Exploratory Data Analysis in `analysis.ipynb`:
+    - **Null Value Analysis**: Identified high missing values in `progression_status` (92%) and `prior_imageID` (64%).
+    - **Duplicate Checking**: Confirmed dataset is in long-format (multiple rows per image).
+    - **Image Verification**: Verified presence of images, including nested directory structure for prior studies.
+    - **Demographics**: Visualized Patient Age and Sex distributions.
+    - **Validation Status**: Discovered 100% of the dataset is `study_is_validation=False` (not manually validated).
+    - **Benchmark Status**: Discovered 100% of the dataset is `study_is_benchmark=True` (it's the official benchmark set).
+    - **Label Analysis**: Visualized Normal vs Pathology distribution.
 
 ## Next Steps
-- Run the notebook to verify data loading.
-- Analyze the structure of the JSON data in more detail.
-- Define specific analysis goals based on user feedback.
+- Create `README.md` to summarize the project and analysis results.
+- (Future) Begin data filtering or preprocessing for model training.
 
 ## Active Decisions
-- Using `memory-bank/` directory for documentation to keep root clean.
-- Added standard data science stack (`pandas`, `matplotlib`) to requirements.
+- **Dataset Nature**: Recognized that the dataset is the "Benchmark" subset of PadChest, meaning it's a fixed standard test set, even if labels are not manually validated.
+- **Data Loading**: Future data loaders must handle the long-format CSV (aggregating labels per ImageID).
